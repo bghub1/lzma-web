@@ -28,10 +28,11 @@
     "chai": "^3.5.0",
     "esbuild": "^0.14.24",
     "mocha": "^7.0.1",
+    "rimraf": "^5.0.7",
     "yarn": "^1.22.17"
   },
   "scripts": {
-    "build": "rm -rf dist && node esbuild.js",
+    "build": "rimraf -rf dist && node esbuild.js",
     "test": "node test/test-node.js && node test/test-node.js --sync",
     "prepack": "yarn build"
   },
